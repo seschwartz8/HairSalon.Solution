@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using HairSalon.Models;
@@ -55,6 +56,28 @@ namespace HairSalon.Controllers
       _db.Stylists.Remove(specificStylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+
+    public ActionResult Search()
+    {
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Search(String name)
+    {
+      var specificStylist = _db.Stylists.FirstOrDefault(stylist => stylist.Name == name);
+      if (specificStylist != null)
+      {
+        int id = specificStylist.StylistId;
+        // List<Client> clients = _db.Clients.Where(client => client.StylistId == id).ToList();
+        // specificStylist.Clients = clients;
+        return RedirectToAction("Details", "Stylists", id);
+      }
+      else
+      {
+        return View();
+      }
     }
   }
 }

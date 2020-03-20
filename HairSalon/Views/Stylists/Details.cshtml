@@ -10,6 +10,7 @@
   <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
   <div class="client-list">
+    <h3>Clients:</h3>
     @if (@Model.Clients.Count == 0)
     {
       <p>No clients found</p>
@@ -17,7 +18,7 @@
 
     @foreach (Client client in @Model.Clients)
     {
-      <h4>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</h4>
+      <h5>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</h5>
     }
   </div>
 </div>
