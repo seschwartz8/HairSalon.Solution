@@ -21,7 +21,7 @@ namespace HairSalon.Controllers
       return View(model);
     }
 
-    public ActionResult New()
+    public ActionResult Create()
     {
       return View();
     }

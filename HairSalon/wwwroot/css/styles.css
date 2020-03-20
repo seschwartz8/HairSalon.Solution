@@ -1,3 +1,18 @@
 body {
   margin: 0 auto;
 }
+
+.salon-img {
+  max-width: 50%;
+}
+
+.btn {
+  background-color: steelblue;
+  padding: 10px 15px;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
