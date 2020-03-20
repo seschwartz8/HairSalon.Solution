@@ -46,3 +46,10 @@ a:hover {
   display: flex;
   justify-content: space-around;
 }
+
+h1 {
+  width: 100%;
+  padding: 15px;
+  background-color: darkcyan;
+  color: white;
+}
