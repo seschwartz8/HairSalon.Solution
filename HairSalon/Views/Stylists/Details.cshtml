@@ -23,7 +23,7 @@
 </div>
 
 <div class="links">
-  <p>@Html.ActionLink("Add client", "Create", "Clients")</p>
+  <p>@Html.ActionLink("Add client", "Create", "Clients", new { id = Model.StylistId})</p>
   <p>@Html.ActionLink("Back to stylists", "Index")</p>
   <p>@Html.ActionLink("Delete stylist", "Delete", new { id = Model.StylistId })</p>
 </div>
