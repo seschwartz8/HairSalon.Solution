@@ -25,6 +25,15 @@
 
 C#/.NET MVC website that shows hair stylists and their clients. This application allows you to create stylists and clients per stylist. Then you can see all your stylists, view specifics about that stylist including their clients, and add/delete clients and stylists.
 
+## Database Set Up
+
+- Run MySQL in your terminal
+- Enter the following commands in your terminal:
+  - CREATE DATABASE sarah_schwartz;
+  - USE sarah_schwartz;
+  - CREATE TABLE stylists (stylistId INT NOT NULL AUTO_INCREMENT, name VARCHAR (100), specialty VARCHAR(100), rate INT, PRIMARY KEY (stylistId));
+  - CREATE TABLE clients (clientId INT NOT NULL AUTO_INCREMENT, name VARCHAR (100), stylistId INT NOT NULL DEFAULT 0, PRIMARY KEY (clientId));
+
 ## Installation Requirements
 
 - Clone the repository on Github
@@ -42,6 +51,7 @@ C#/.NET MVC website that shows hair stylists and their clients. This application
 - As the salon owner, I need to be able to select a stylist, see their details, and see a list of all clients that belong to that stylist.
 - As the salon owner, I need to add new stylists to our system when they are hired.
 - As the salon owner, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
+- (In progress) As the salon owner, I need to be able to search a specific stylist in our system and find that stylist's details page.
 
 ## Known Bugs
 
