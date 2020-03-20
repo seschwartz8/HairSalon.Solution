@@ -70,9 +70,7 @@ namespace HairSalon.Controllers
       if (specificStylist != null)
       {
         int id = specificStylist.StylistId;
-        // List<Client> clients = _db.Clients.Where(client => client.StylistId == id).ToList();
-        // specificStylist.Clients = clients;
-        return RedirectToAction("Details", "Stylists", id);
+        return RedirectToAction("Details", "Stylists", new { id = id });
       }
       else
       {
