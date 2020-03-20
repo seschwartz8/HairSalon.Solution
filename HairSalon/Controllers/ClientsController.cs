@@ -37,11 +37,11 @@ namespace HairSalon.Controllers
       return RedirectToAction("Index");
     }
 
-    // public ActionResult Details(int id)
-    // {
-    //   Client specificClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
-    //   return View(specificClient);
-    // }
+    public ActionResult Details(int id)
+    {
+      Client specificClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
+      return View(specificClient);
+    }
 
     // public ActionResult Edit(int id)
     // {
