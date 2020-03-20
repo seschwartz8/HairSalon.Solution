@@ -11,17 +11,17 @@ namespace HairSalon.Controllers
   {
     private readonly HairSalonContext _db;
 
-    public RestaurantsController(HairSalonContext db)
+    public ClientsController(HairSalonContext db)
     {
       _db = db;
     }
 
-    public ActionResult Index()
-    {
-      ViewBag.Stylists = (List<Stylist>) _db.Stylists.ToList();
-      List<Client> model = _db.Clients.Include(clients => clients.Stylist).ToList();
-      return View(model);
-    }
+    // public ActionResult Index()
+    // {
+    //   ViewBag.Stylists = (List<Stylist>) _db.Stylists.ToList();
+    //   List<Client> model = _db.Clients.Include(clients => clients.Stylist).ToList();
+    //   return View(model);
+    // }
 
     public ActionResult New()
     {
