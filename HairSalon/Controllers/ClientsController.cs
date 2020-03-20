@@ -16,26 +16,19 @@ namespace HairSalon.Controllers
       _db = db;
     }
 
-    // public ActionResult Index()
-    // {
-    //   ViewBag.Stylists = (List<Stylist>) _db.Stylists.ToList();
-    //   List<Client> model = _db.Clients.Include(clients => clients.Stylist).ToList();
-    //   return View(model);
-    // }
-
     public ActionResult Create(int id)
     {
-      // ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
       ViewBag.StylistId = id;
       return View();
     }
 
     [HttpPost]
-    public ActionResult Create(Client client)
+    public ActionResult Create(Client client, int id)
     {
+      client.StylistId = id;
       _db.Clients.Add(client);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Index", "Stylists");
     }
 
     public ActionResult Details(int id)
@@ -43,21 +36,6 @@ namespace HairSalon.Controllers
       Client specificClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
       return View(specificClient);
     }
-
-    // public ActionResult Edit(int id)
-    // {
-    //   var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
-    //   ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Type");
-    //   return View(thisRestaurant);
-    // }
-
-    // [HttpPost]
-    // public ActionResult Update(Restaurant restaurant)
-    // {
-    //   _db.Entry(restaurant).State = EntityState.Modified;
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
 
     public ActionResult Delete(int id)
     {

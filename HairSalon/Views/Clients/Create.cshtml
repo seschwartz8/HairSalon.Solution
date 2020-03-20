@@ -6,10 +6,11 @@
 <h1>Add a new client</h1>
 
 <p>@ViewBag.StylistId</p>
+
 <div class="content">
   @using (Html.BeginForm("Details", "Stylists"))
   {
-      @Html.Hidden("id", new { id = ViewBag.StylistId })
+      @Html.Hidden("stylistId", new { id = ViewBag.StylistId })
 
       @Html.LabelFor(model => model.Name)
       @Html.TextBoxFor(model => model.Name)
@@ -19,5 +20,5 @@
 </div>
 
 <div class="links">
-  <p>@Html.ActionLink("Back to stylist", "Details", "Stylists", new {id = ViewBag.StylistId} )</p>
+  <p>@Html.ActionLink("Back to your stylist", "Details", "Stylists", new {id = ViewBag.StylistId} )</p>
 </div>

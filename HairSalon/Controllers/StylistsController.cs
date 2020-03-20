@@ -40,20 +40,6 @@ namespace HairSalon.Controllers
       return View(specificStylist);
     }
 
-    // public ActionResult Edit(int id)
-    // {
-    //   var thisCuisine = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
-    //   return View(thisCuisine);
-    // }
-
-    // [HttpPost]
-    // public ActionResult Update(Cuisine cuisine)
-    // {
-    //   _db.Entry(cuisine).State = EntityState.Modified;
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
-
     public ActionResult Delete(int id)
     {
       var specificStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
