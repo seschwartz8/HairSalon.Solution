@@ -13,17 +13,19 @@
 ## Table of Contents
 
 1. [Description](#description)
-2. [Setup/Installation Requirements](#installation-requirements)
-3. [Specifications](#specs)
-4. [Known Bugs](#known-bugs)
-5. [Technologies Used](#technologies-used)
-6. [License](#license)
+2. [Database Set Up](#database-set-up)
+3. [Installation Requirements](#database-set-up)
+4. [Specifications](#specs)
+5. [User Stories](#user-stories)
+6. [Known Bugs](#known-bugs)
+7. [Technologies Used](#technologies-used)
+8. [License](#license)
 
 ---
 
 ## Description
 
-C#/.NET MVC website that shows hair stylists and their clients. This application allows you to create stylists and clients per stylist. Then you can see all your stylists, view specifics about that stylist including their clients, and add/delete clients and stylists.
+Epicodus independent Friday project for 3/20/20: C#/.NET MVC website that shows hair stylists and their clients. This application allows you to create stylists and clients per stylist. Then you can see all your stylists, view specifics about that stylist including their clients, and add/delete clients and stylists. You can also search for a specific stylist and see all related search results.
 
 ## Database Set Up
 
@@ -51,7 +53,7 @@ C#/.NET MVC website that shows hair stylists and their clients. This application
 - As the salon owner, I need to be able to select a stylist, see their details, and see a list of all clients that belong to that stylist.
 - As the salon owner, I need to add new stylists to our system when they are hired.
 - As the salon owner, I need to be able to add new clients to a specific stylist. I should not be able to add a client if no stylists have been added.
-- (In progress) As the salon owner, I need to be able to search a specific stylist in our system and find that stylist's details page.
+- As the salon owner, I need to be able to search a specific stylist in our system see all search results (and their related details).
 
 ## Known Bugs
 

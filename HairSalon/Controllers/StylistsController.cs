@@ -64,18 +64,10 @@ namespace HairSalon.Controllers
     }
 
     [HttpPost]
-    public ActionResult Search(String name)
+    public ActionResult SearchList(String name)
     {
-      var specificStylist = _db.Stylists.FirstOrDefault(stylist => (stylist.Name).Contains(name));
-      if (specificStylist != null)
-      {
-        int id = specificStylist.StylistId;
-        return RedirectToAction("Details", "Stylists", new { id = id });
-      }
-      else
-      {
-        return View();
-      }
+      List<Stylist> specificStylists = _db.Stylists.Where(stylist => (stylist.Name).Contains(name)).ToList();
+      return View(specificStylists);
     }
   }
 }
