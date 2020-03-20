@@ -1,4 +1,4 @@
-using BestRestaurant.Models;
+using HairSalon.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BestRestaurant
+namespace HairSalon
 {
   public class Startup
   {
@@ -25,7 +25,7 @@ namespace BestRestaurant
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<BestRestaurantContext>(options => options
+        .AddDbContext<HairSalonContext>(options => options
           .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 
