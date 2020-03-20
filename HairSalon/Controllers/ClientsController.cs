@@ -44,13 +44,12 @@ namespace HairSalon.Controllers
     }
 
     [HttpPost, ActionName("Delete")]
-    public ActionResult DeleteConfirmed(int clientId, int stylistId)
+    public ActionResult DeleteConfirmed(int id)
     {
-      ViewBag.StylistId = stylistId;
-      var specificClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == clientId);
+      var specificClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
       _db.Clients.Remove(specificClient);
       _db.SaveChanges();
-      return RedirectToAction("Details", "Stylists", specificClient.StylistId);
+      return RedirectToAction("Index", "Stylists");
     }
   }
 }
