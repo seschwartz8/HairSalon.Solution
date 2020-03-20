@@ -66,7 +66,7 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Search(String name)
     {
-      var specificStylist = _db.Stylists.FirstOrDefault(stylist => stylist.Name == name);
+      var specificStylist = _db.Stylists.FirstOrDefault(stylist => (stylist.Name).Contains(name));
       if (specificStylist != null)
       {
         int id = specificStylist.StylistId;
