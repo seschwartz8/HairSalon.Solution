@@ -10,6 +10,8 @@
   
   @using (Html.BeginForm())
   {
+      @Html.Hidden("stylistId", new { id = ViewBag.StylistId })
+
       <input type="submit" value="Delete" class="btn"/>
   }
 </div>
