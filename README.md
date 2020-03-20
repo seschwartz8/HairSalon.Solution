@@ -14,7 +14,7 @@
 
 1. [Description](#description)
 2. [Database Set Up](#database-set-up)
-3. [Installation Requirements](#database-set-up)
+3. [Installation Requirements](#installation-requirements)
 4. [Specifications](#specs)
 5. [User Stories](#user-stories)
 6. [Known Bugs](#known-bugs)
